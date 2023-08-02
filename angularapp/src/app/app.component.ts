@@ -25,8 +25,8 @@ export class AppComponent {
     }
     else if(fromCurrency == 'GBP' && toCurrency=='USD')
     {
-      this.result=((1.126735/0.876893)*this.amount);
-      return Math.round(this.result);
+      this.result=((1.126735/0.876893)*this.amount).toFixed(2);
+      return this.result;
     }
     else
     {
