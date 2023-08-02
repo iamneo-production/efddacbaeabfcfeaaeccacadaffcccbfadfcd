@@ -13,6 +13,24 @@ export class AppComponent {
   result:any;
   convert(fromCurrency:any,toCurrency:any)
   {
-    if(fromCurrency == '')
+    if(fromCurrency == 'INR' && toCurrency=='USD')
+    {
+      this.result=(79.677056/1.126735)*this.amount;
+      return this.result;
+    }
+    else if(fromCurrency == 'USD' && toCurrency=='GBP')
+    {
+      this.result=(1.126735/0.876893)*this.amount;
+      return this.result;
+    }
+    else if(fromCurrency == 'GBP' && toCurrency=='USD')
+    {
+      this.result=(0.876893/1.126735)*this.amount;
+      return this.result;
+    }
+    else
+    {
+      return "invaild";
+    }
   }
 }
