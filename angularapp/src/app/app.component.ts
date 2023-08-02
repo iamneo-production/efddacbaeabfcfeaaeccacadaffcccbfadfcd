@@ -11,26 +11,21 @@ export class AppComponent {
   fromCurrency:string ='USD';
   toCurrency:string = 'USD';
   result:any;
-  convert(fromCurrency:any,toCurrency:any,amount:any)
+  convert(fromCurrency:any,toCurrency:any)
   {
-    if(amount == 100)
+    if(fromCurrency == 'INR' && toCurrency=='USD')
     {
-      this.result=1.00.toFixed(2);
+      this.result=((1.126735/79.677056)*this.amount).toFixed(2);
       return this.result;
     }
-    else if(amount == 4000)
+    else if(fromCurrency == 'USD' && toCurrency=='GBP')
     {
-      this.result=3113.00.toFixed(2);
+      this.result=((0.876893/1.126735)*this.amount).toFixed(2);
       return this.result;
     }
     else if(fromCurrency == 'GBP' && toCurrency=='USD')
     {
-      this.result=5140.00.toFixed(2);
-      return this.result;
-    }
-    else if(amount == 200)
-    {
-      this.result=3.00.toFixed(2);
+      this.result=((1.126735/0.876893)*this.amount).toFixed(2);
       return this.result;
     }
     else
