@@ -1,3 +1,20 @@
 <div>
   <h1>Currency Converter</h1>
+  <input type="text" [(ngModel)]="amount" placeholder="Enter Amount"/>
+  <select [(ngModel)]="fromCurrency">
+    <option value="USD">USD</option>
+    <option value="INR">INR</option>
+    <option value="GBP">GBP</option>
+  </select>
+  <select [(ngModel)]="toCurrency">
+    <option value="USD">USD</option>
+    <option value="INR">INR</option>
+    <option value="GBP">GBP</option>
+  </select>
+  <button (click)="convert(fromCurrency,toCurrency)">Submitbutton</button>
+  <p>
+    <span>Amount : {{amount}}</span>
+    <span>From : {{fromCurrency}}</span>
+    <span>To : {{toCurrency}}</span>
+    
 </div>
