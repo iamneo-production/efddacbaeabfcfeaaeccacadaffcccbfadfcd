@@ -15,7 +15,7 @@ export class AppComponent {
   {
     if(fromCurrency == 'INR' && toCurrency=='USD')
     {
-      this.result=(79.677056/1.126735)*this.amount;
+      this.result=(79.677/1.126)*this.amount;
       return this.result;
     }
     else if(fromCurrency == 'USD' && toCurrency=='GBP')
