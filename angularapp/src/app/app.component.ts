@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularapp';
-  
+  fromCurrency=0;
+  toCurrency=0;
+  amount:any;
+  result:any;
+  setSource(source:any)
+  {
+    this.fromCurrency=source;
+  }
+  setTarge
 }
