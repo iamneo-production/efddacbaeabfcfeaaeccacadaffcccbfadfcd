@@ -5,5 +5,21 @@
         <br/><br/>
         <div class="dropdown">
             <label for="fromCurrency">From</label>
-            <select class="form-"
+            <select class="form-control" name="fromCurrency" [(ngModel)]="fromCurrency">
+                <option value="79.677056">INR</option>
+                <option value="1.126735">USD</option>
+                <option value="0.876893">GBP</option>
+            </select>
+        </div>
+        <br/>
+        <div class="dropdown">
+            <label for="toCurrency">To</label>
+            <select class="form-control" name="toCurrency" [(ngModel)]="toCurrency">
+                <option value="79.677056">INR</option>
+                <option value="1.126735">USD</option>
+                <option value="0.876893">GBP</option>
+            </select>
+        </div>
+        <br>
+        <button id="submitButton" (click)="convert()">Submkit</button>
     </div>
