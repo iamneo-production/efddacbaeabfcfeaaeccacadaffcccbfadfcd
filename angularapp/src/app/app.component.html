@@ -1,7 +1,7 @@
 <div class="wrapper">
 <h1>Currency Converter</h1>
 <form action="#">
-  <div class="Amount">
+  <div class="Rs">
     <p>Amount</p>
     <input type="text" value="1">
   </div>
@@ -16,7 +16,7 @@
         </select> 
       </div>
     </div>
-    <div class="Target CCY">
+    <div [(ngModel)]="Target CCY">
       <p>toCurrency</p>
       <div class="select-box">
         <select>
@@ -27,9 +27,8 @@
       </div>
     </div>
   </div>
-  <div class
+  <button (click)="submitButton(fromCurrency,toCurrency)">Submit Button</button>
 </form>
-<button (click)="submitButton(fromCurrency,toCurrency)">submit</button>
 <p>
 <span>Converted : {{resValue }} </span>
 </p>
