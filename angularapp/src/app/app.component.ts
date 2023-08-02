@@ -15,5 +15,13 @@ export class AppComponent {
   {
     this.fromCurrency=source;
   }
-  setTarge
+  setTarget(target:any)
+  {
+    this.toCurrency=target;
+  }
+  convert()
+  {
+    this.result=(this.toCurrency/this.fromCurrency)*this.amount;
+    this.result=Math.round(this.result).toFixed(2);
+  }
 }
