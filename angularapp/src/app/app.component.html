@@ -1,6 +1,6 @@
 <h1>Currency Converter</h1>
   <form>
-  <input type="text" [(ngModel)]="amount" placeholder="Enter Amount"/>
+  <label for="amount">enter Amount</label><br>
   <select [(ngModel)]="fromCurrency">
     <option value="USD">USD</option>
     <option value="INR">INR</option>
@@ -12,7 +12,5 @@
     <option value="GBP">GBP</option>
   </select>
   <button (click)="submitButton(fromCurrency,toCurrency)">submit</button>
-  <p>
     <span>Converted : {{resValue}} </span>
-  </p>
 </form>
