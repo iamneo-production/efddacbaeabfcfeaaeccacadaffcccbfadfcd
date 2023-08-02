@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularapp';
+  amount!:number;
+  fromCurrency:string ='USD';
+  toCurrency:string = 'USD';
+  result:any;
+  convert(fromCurrency:any,toCurrency:any)
+  {
+    if(fromCurrency == '')
+  }
 }
