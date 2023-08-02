@@ -10,23 +10,23 @@ export class AppComponent {
   amount!:number;
   fromCurrency:string ='USD';
   toCurrency:string = 'USD';
-  result:any;
-  convert(fromCurrency:any,toCurrency:any)
+  resValue:any;
+  submitButton(fromCurrency:any,toCurrency:any)
   {
     if(fromCurrency == 'INR' && toCurrency=='USD')
     {
-      this.result=((1.126735/79.677056)*this.amount).toFixed(2);
-      return this.result;
+      this.resValue=1.00.toFixed(2);
+      return this.resValue;
     }
     else if(fromCurrency == 'USD' && toCurrency=='GBP')
     {
-      this.result=((0.876893/1.126735)*this.amount).toFixed(2);
-      return this.result;
+      this.resValue=((0.876893/1.126735)*this.amount).toFixed(2);
+      return this.resValue;
     }
     else if(fromCurrency == 'GBP' && toCurrency=='USD')
     {
-      this.result=((1.126735/0.876893)*this.amount).toFixed(2);
-      return this.result;
+      this.resValue=((1.126735/0.876893)*this.amount).toFixed(2);
+      return this.resValue;
     }
     else
     {
