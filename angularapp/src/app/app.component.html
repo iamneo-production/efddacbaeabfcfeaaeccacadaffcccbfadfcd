@@ -8,28 +8,24 @@
   <div class="drop-down">
     <div class="Source CCY">
       <p>fromCurrency</p>
-      <div class="select-box">
-        <select>
+        <select [(ngModel)]="fromCurrency
           <option value="USD">USD</option>
           <option value="INR">INR</option>
           <option value="GBP">GBP</option>
         </select> 
-      </div>
     </div>
-    <div [(ngModel)]="Target CCY">
+    <div class="Target CCY">
       <p>toCurrency</p>
-      <div class="select-box">
-        <select>
+        <select [(ngModel)]="toCurrency">
           <option value="USD">USD</option>
           <option value="INR">INR</option>
           <option value="GBP">GBP</option>
         </select> 
-      </div>
     </div>
   </div>
   <button (click)="submitButton(fromCurrency,toCurrency)">Submit Button</button>
+  <p>
+    <span>Converted : {{resValue }} </span>
+    </p>
 </form>
-<p>
-<span>Converted : {{resValue }} </span>
-</p>
 </div>
