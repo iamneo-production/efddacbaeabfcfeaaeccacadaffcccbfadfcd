@@ -11,11 +11,8 @@
     <option value="INR">INR</option>
     <option value="GBP">GBP</option>
   </select>
-  <button (click)="convert(fromCurrency,toCurrency)">Submitbutton</button>
+  <button (click)="convert(fromCurrency,toCurrency,amount)">Submitbutton</button>
   <p>
-    <span>Amount : {{amount}}</span>
-    <span>From : {{fromCurrency}}</span>
-    <span>To : {{toCurrency}}</span>
-    <span>Converted : {{result | currency:fromCurrency:toCurrency}} </span>
+    <span>Converted : {{result }} </span>
   </p>
 </div>
