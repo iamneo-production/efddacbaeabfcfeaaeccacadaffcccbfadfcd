@@ -21,7 +21,7 @@
   <div class="dropdown" style="align-items:center" >
   
       <label for="toCurrency">TO</label>
-      <select class="form-control" name="toCurrency" [(ngModel)]="toCurrency"  >
+      <select class="form-control" id="toCurrency" name="toCurrency" [(ngModel)]="toCurrency"  >
        <option value=79.677056>INR</option>
        <option value=1.126735>USD</option>
        <option value=0.876893>GBP</option>
@@ -30,10 +30,8 @@
   </div>
   <br>
   <br/>
-  <div class="resut" style="text-align: center;">
-   <button id="submitButton" (click)="convert(fromCurrency,toCurrency)">CONVERT</button>
-  </div>
-  <div id="result"  class="final" >
+   <button id="submitButton" (click)="convert()">CONVERT</button>
+  <div id="result">
    <ng-container  id="resValue">{{num}}
    </ng-container></div>
   </div>

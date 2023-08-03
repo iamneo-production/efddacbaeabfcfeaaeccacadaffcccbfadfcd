@@ -10,7 +10,7 @@ export class AppComponent {
   fromCurrency=0;
   toCurrency=0;
    amount=0;
-   num:any;
+   num=0;
    setSource(s:any){
      this.fromCurrency=s;
    } 
@@ -20,21 +20,8 @@ export class AppComponent {
  
    }
  
-   convert(fromCurrency:any,toCurrency:any){
-    if(fromCurrency=='INR' && toCurrency=='USD')
-    {
-    this.num=(1.126735/79.677056)*this.amount;
+   convert(){
+    this.num=(this.toCurrency/this.fromCurrency)*this.amount;
     this.num = Math.round(this.num);
    }
-   else if(fromCurrency=='USD' && toCurrency=='GBP')
-   {
-   this.num=(0.876893/1.126735)*this.amount;
-   this.num = Math.round(this.num);
-  }
-   else if(fromCurrency=='GBP' && toCurrency=='USD')
-   {
-   this.num=(1.126735/0.876893)*this.amount;
-   this.num = Math.round(this.num);
-  } 
  }
-}
