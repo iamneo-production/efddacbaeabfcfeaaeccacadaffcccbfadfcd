@@ -2,24 +2,22 @@
     <h1>Currency Converter</h1>
     <div class="form-group">
       <label for="Amount">Amount</label>
-      <input id="amount" class="form-control" type="amount" name="amount" [(ngModel)]="amount">
+      <input type="text" id="amount" name="amount" [(ngModel)]="amount">
       <div class="dropdown">
-        <select class="form-control" name="fromCurrency" id="fromCurrency" [(ngModel)]="fromCurrency">
+        <select id="fromCurrency" name="fromCurrency" [(ngModel)]="fromCurrency">
           <option value="USD">USD</option>
           <option value="INR">INR</option>
           <option value="GBP">GBP</option>
         </select>
-        <select class="form-control" id="toCurrency" [(ngModel)]="toCurrency">
+        <select id="toCurrency" name="toCurrency"[(ngModel)]="toCurrency">
             <option value="USD">USD</option>
             <option value="INR">INR</option>
             <option value="GBP">GBP</option>
         </select>
-      <div id="submitButton">
-        <button (click)="submitButton()">submit</button>
-      </div>
+    </div>
+        <button id="submitButton" (click)="submitButton()">submit</button>
         <div id="result">
           <ng-container id="resValue">{{result}}</ng-container>
         </div>
-        </
     </div>
   </form>
