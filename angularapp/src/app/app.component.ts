@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'angularapp';
   fromCurrency=0;
   toCurrency=0;
-   Amount=0;
-   num:any;
+   amount=0;
+   result:any;
    setSource(s:any){
      this.fromCurrency=s;
    } 
@@ -19,9 +19,9 @@ export class AppComponent {
      this.toCurrency=t;
  
    }
- 
-   convert(){
-    this.num=(this.toCurrency/this.fromCurrency)*this.Amount;
-    this.num = Math.round(this.num).toFixed(2);
+   submitButton()
+   {
+    this.result=(this.toCurrency/this.fromCurrency)*this.amount;
+    this.result = Math.round(this.result).toFixed(2);
    }
  }
