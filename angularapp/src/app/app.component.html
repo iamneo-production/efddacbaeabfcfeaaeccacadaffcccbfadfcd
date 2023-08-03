@@ -1,9 +1,7 @@
 <form>
     <h1>Currency Converter</h1>
-    <div class="form-group">
       <label for="Amount">Amount</label>
-      <input type="text" class="id="amount" name="amount" [(ngModel)]="amount">
-      <div class="dropdown">
+      <input type="text" id="amount" name="amount" [(ngModel)]="amount">
         <select id="fromCurrency" name="fromCurrency" [(ngModel)]="fromCurrency">
           <option value="USD">USD</option>
           <option value="INR">INR</option>
@@ -14,10 +12,6 @@
             <option value="INR">INR</option>
             <option value="GBP">GBP</option>
         </select>
-    </div>
-        <button id="submitButton" (click)="submitButton()">submit</button>
-        <div id="result">
+        <button id="result" (click)="submitButton()">submit</button>
           <ng-container id="resValue">{{result}}</ng-container>
-        </div>
-    </div>
   </form>
