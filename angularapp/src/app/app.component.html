@@ -1,6 +1,6 @@
 <form>
 <h1> Currency Converter</h1>
-   <div class="form-group" >
+   <div class="form-group">
    <div class="dropdown">
        <label for="fromCurrency">From</label>
   <select id="fromCurrency" name="fromCurrency" [(ngModel)]="fromCurrency" class="form-control">
@@ -27,8 +27,8 @@
    <button (click)="reset()" class="bt2" title="RESET">RESET</button>
   </div>
   <br />
-  <div id="result"  class="final" >
-   <ng-container  id="resValue">{{result}}
+  <div id="result">
+   <ng-container id="resValue">{{result}}
    </ng-container></div>
   </div>
   </form>
