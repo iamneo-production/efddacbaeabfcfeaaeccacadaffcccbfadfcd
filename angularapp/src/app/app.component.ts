@@ -22,6 +22,12 @@ export class AppComponent {
    convert()
    {
     this.result=(this.toCurrency/this.fromCurrency)*this.amount;
-    this.result = Math.round(this.result).toFixed(2);
+    this.result = Math.round(this.result);
    }
+   reset(){
+    this.amount=0;
+    this.result=0;
+    this.toCurrency=0;
+    this.fromCurrency=0;
+  }
  }
