@@ -5,19 +5,21 @@
       <input id="amount" class="form-control" type="amount" name="amount" [(ngModel)]="amount">
       <div class="dropdown">
         <select class="form-control" name="fromCurrency" id="fromCurrency" [(ngModel)]="fromCurrency">
-          <option value="1.126735">USD</option>
-          <option value="79.677056">INR</option>
-          <option value="0.876893">GBP</option>
+          <option value="USD">USD</option>
+          <option value="INR">INR</option>
+          <option value="GBP">GBP</option>
         </select>
-        <select class="form-control" name="toCurrency" id="toCurrency" [(ngModel)]="toCurrency">
-            <option value="1.126735">USD</option>
-            <option value="79.677056">INR</option>
-            <option value="0.876893">GBP</option>
+        <select class="form-control" id="toCurrency" [(ngModel)]="toCurrency">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+            <option value="GBP">GBP</option>
         </select>
+      <div id="submitButton">
+        <button (click)="submitButton()">submit</button>
       </div>
-        <button id="submitButton" class="btn" (click)="submitButton()">submit</button>
         <div id="result">
           <ng-container id="resValue">{{result}}</ng-container>
         </div>
+        </
     </div>
   </form>
