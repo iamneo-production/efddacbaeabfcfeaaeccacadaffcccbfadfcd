@@ -20,7 +20,7 @@ export class AppComponent {
  
    }
  
-   convert(fromCurrency:string,toCurrency:string){
+   convert(fromCurrency:any,toCurrency:any){
     if(fromCurrency=='INR' && toCurrency=='USD')
     {
     this.num=(1.126735/79.677056)*this.amount;
@@ -31,9 +31,10 @@ export class AppComponent {
    this.num=(0.876893/1.126735)*this.amount;
    this.num = Math.round(this.num);
   }
-   else if(fromCurrency=='GBP' && toCurrency=='US')
+   else if(fromCurrency=='GBP' && toCurrency=='USD')
    {
-   this.num=(0.876893/1.126735)*this.amount;
+   this.num=(1.126735/0.876893)*this.amount;
    this.num = Math.round(this.num);
   } 
  }
+}

@@ -1,4 +1,4 @@
-<form><div class="head" style="color: rgb(228, 226, 234)">
+<form><div class="head">
     <header>
        <h1 style="font-size: 35px;align-items: center;padding-top: 10px;"> Currency Converter</h1></header>
    </div>
@@ -31,7 +31,7 @@
   <br>
   <br/>
   <div class="resut" style="text-align: center;">
-   <button id="submitButton" (click)="convert()">CONVERT</button>
+   <button id="submitButton" (click)="convert(fromCurrency,toCurrency)">CONVERT</button>
   </div>
   <div id="result"  class="final" >
    <ng-container  id="resValue">{{num}}
