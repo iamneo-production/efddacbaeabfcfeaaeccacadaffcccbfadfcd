@@ -14,7 +14,8 @@ import { NgModule } from '@angular/core';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
