@@ -20,14 +20,20 @@ export class AppComponent {
  
    }
  
-   convert(){
-    this.num=(this.toCurrency/this.fromCurrency)*this.amount;
-    this.num = Math.round(this.num).toFixed(2);
+   convert(fromCurrency:string,toCurrency:string){
+    if(fromCurrency=='INR' && toCurrency=='USD')
+    {
+    this.num=(1.126735/79.677056)*this.amount;
+    this.num = Math.round(this.num);
    }
-   reset(){
-     this.amount=0;
-     this.num=0;
-     this.toCurrency=0;
-     this.fromCurrency=0;
-   }
+   else if(fromCurrency=='USD' && toCurrency=='GBP')
+   {
+   this.num=(0.876893/1.126735)*this.amount;
+   this.num = Math.round(this.num);
+  }
+   else if(fromCurrency=='GBP' && toCurrency=='US')
+   {
+   this.num=(0.876893/1.126735)*this.amount;
+   this.num = Math.round(this.num);
+  } 
  }
