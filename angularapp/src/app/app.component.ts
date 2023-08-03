@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'angularapp';
   fromCurrency=0;
   toCurrency=0;
-   amount=0;
+   Amount=0;
    num=0;
    setSource(s:any){
      this.fromCurrency=s;
@@ -21,7 +21,7 @@ export class AppComponent {
    }
  
    convert(){
-    this.num=(this.toCurrency/this.fromCurrency)*this.amount;
+    this.num=(this.toCurrency/this.fromCurrency)*this.Amount;
     this.num = Math.round(this.num);
    }
  }
