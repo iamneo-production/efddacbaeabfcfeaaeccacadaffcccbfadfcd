@@ -10,7 +10,7 @@ export class AppComponent {
   fromCurrency=0;
   toCurrency=0;
    Amount=0;
-   num=0;
+   num:any;
    setSource(s:any){
      this.fromCurrency=s;
    } 
@@ -22,6 +22,6 @@ export class AppComponent {
  
    convert(){
     this.num=(this.toCurrency/this.fromCurrency)*this.Amount;
-    this.num = Math.round(this.num);
+    this.num = Math.round(this.num).toFixed(2);
    }
  }
