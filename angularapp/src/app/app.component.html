@@ -1,6 +1,12 @@
+<div class="container"
 <form>
 <h1> Currency Converter</h1>
    <div class="form-group">
+    <div class="example-container">
+      <label for="Amount">Enter Amount</label>
+      <br>
+      <input type="text" [(ngModel)]="amount" id="amount" placeholder="100">
+       </div>
    <div class="dropdown">
        <label for="fromCurrency">From</label>
   <select id="fromCurrency" name="fromCurrency" [(ngModel)]="fromCurrency" class="form-control">
@@ -8,11 +14,6 @@
   <option value=1.126735>USD</option>
   <option value=0.876893>GBP</option></select></div>
   <br /> <br />
-    <div class="example-container">
-  <label for="amount">Enter Amount</label>
-  <br>
-  <input type="text" [(ngModel)]="amount" class="text" id="amount" name="amount"  placeholder="eg.500">
-   </div>
   <div class="dropdown">
       <label for="toCurrency">To</label>
       <select class="form-control" id="toCurrency" name="toCurrency" [(ngModel)]="toCurrency">
